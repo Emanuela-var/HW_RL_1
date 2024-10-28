@@ -1,0 +1,24 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 425  # Hz
+ 
+ 
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+ 
+    position_controller:
+      type: position_controllers/JointGroupPositionController
+ 
+ 
+position_controller:
+  ros__parameters:
+    joints:
+      - j0
+      - j1
+      - j2
+      - j3
+ 
+    limits:
+      max_velocity: 5.0  # Limite di velocità in rad/s
+      max_acceleration: 2.5  # Limite di accelerazione in rad/s^2
+ 
