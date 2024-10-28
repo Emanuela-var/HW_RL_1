@@ -397,7 +397,7 @@
     </inertial>
   </link>
 
-  <xacro:include filename="$(find arm_description)/urdf/cam_tot.xacro"/>
+  <xacro:include filename="$(find arm_gazebo)/urdf/cam_tot.xacro"/>
   <xacro:my_camera parent="base_link"/>
 
 

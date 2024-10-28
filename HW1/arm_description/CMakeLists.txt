@@ -7,7 +7,7 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
-find_package(arm_control REQUIRED)
+
 
 # uncomment the following section in order to fill in
 # further dependencies manually.
@@ -26,12 +26,9 @@ if(BUILD_TESTING)
 endif()
 
 install(
-  DIRECTORY launch urdf meshes config env-hooks
+  DIRECTORY launch urdf meshes config 
   DESTINATION share/${PROJECT_NAME}
 )
-
-ament_environment_hooks("${CMAKE_CURRENT_SOURCE_DIR}/env-hooks/${PROJECT_NAME}.sh.in")
-ament_environment_hooks("${CMAKE_CURRENT_SOURCE_DIR}/env-hooks/${PROJECT_NAME}.dsv.in")
 
 
 ament_package()
