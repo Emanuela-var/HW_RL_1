@@ -6,7 +6,11 @@
     <joint name="camera_joint" type="fixed">
       <parent link="${parent}"/>
       <child link="camera_link"/>
+<<<<<<< HEAD:HW1/arm_gazebo/urdf/cam_tot.xacro
       <origin xyz="0.001 -0.04 0.055" rpy="0.0 0.0 -1.57"/>
+=======
+      <origin xyz="0.001 -0.04 0.055" rpy="0.0 -1.57 0"/>
+>>>>>>> a71709e1f2620dd58e02cc182511721360c69a44:HW1/arm_description/urdf/cam_tot.xacro
     </joint>
 
     <link name="camera_link">

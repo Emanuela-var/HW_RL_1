@@ -14,11 +14,11 @@ find_package(sensor_msgs REQUIRED)
 # uncomment the following section in order to fill in
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
-add_executable(position_command_publisher src/publisher_member_function.cpp)
-add_executable(joint_state_subscriber src/joint_state_subscriber.cpp)
+add_executable(arm_controller_node src/publisher_member_function.cpp)
 
-ament_target_dependencies(position_command_publisher rclcpp std_msgs sensor_msgs)
-ament_target_dependencies(joint_state_subscriber rclcpp sensor_msgs)
+
+ament_target_dependencies(arm_controller_node rclcpp std_msgs sensor_msgs)
+
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -33,8 +33,7 @@ if(BUILD_TESTING)
 endif()
 
 install(TARGETS
-  position_command_publisher
-  joint_state_subscriber
+  arm_controller_node
   DESTINATION lib/${PROJECT_NAME})
 
 ament_package()
